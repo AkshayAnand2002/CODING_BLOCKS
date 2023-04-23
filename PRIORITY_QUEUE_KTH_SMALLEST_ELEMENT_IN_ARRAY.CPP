@@ -1,4 +1,5 @@
 //KTH SMALLEST ELEMENT IN ARRAY
+//USED MAX HEAP HERE
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
@@ -8,6 +9,7 @@ int kthsmallest(int a[],int l,int r,int k){
         maxh.push(a[i]);
         if(maxh.size()>k){
             maxh.pop();
+            //MAXIMUM ELEMENT TILL THAT STAGE IS POPPED OUT.
         }
     }
     return maxh.top();
